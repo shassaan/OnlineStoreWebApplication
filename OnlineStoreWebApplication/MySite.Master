@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MySite.master.cs" Inherits="OnlineStoreWebApplication.MySite" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+     <script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+    <%--<script src="assets/js/bootstrap.js"></script>--%>
+    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="assets/css/custom.css"/>
+    <asp:ContentPlaceHolder ID="title" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="main" class="container">
+            <div id="header" class="page-header">
+                <asp:Image ID="HeaderImage" ImageUrl="~/Images/header.jpg"  runat="server" style="align-self:center" CssClass="img-responsive"/>
+            </div>
+
+            <nav class="navbar navbar-inverse">
+                  <div class="container-fluid">
+                    <div class="navbar-header">
+                      <a class="navbar-brand" href="#">Online Store</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Home</a></li>
+                      <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pages
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="ItemTypeWebForm.aspx">Item Type</a></li>
+                          <li><a href="ItemWebForm.aspx">Items</a></li>
+                          <li><a href="CustomerWebForm.aspx">Customer</a></li>
+                          <li><a href="CustomerGalleryWebForm.aspx">Customer Gallery</a></li>
+                          <li><a href="ItemSearchWebForm.aspx">Items Search</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">About</a></li>
+                      
+                    </ul>
+                  </div>
+              </nav>
+               <div class="row" id="wrapper">
+                   <div class="col-md-2" id="TreeView" style="border:1px solid black; border-right:none; border-bottom:none;">
+                       <asp:TreeView ID="NavigationTreeView" runat="server">
+                           <Nodes>
+                               <asp:TreeNode Text="Home" Value="Home"></asp:TreeNode>
+                               <asp:TreeNode Text="Pages" Value="Pages">
+                                   <asp:TreeNode NavigateUrl="~/ItemTypeWebForm.aspx" Text="Item Type" Value="Item Type"></asp:TreeNode>
+                                   <asp:TreeNode NavigateUrl="~/ItemWebForm.aspx" Text="Items" Value="Items"></asp:TreeNode>
+                                   <asp:TreeNode NavigateUrl="~/CustomerWebForm.aspx" Text="Customer" Value="Customer"></asp:TreeNode>
+                                   <asp:TreeNode NavigateUrl="~/CustomerGalleryWebForm.aspx" Text="Customer Gallery" Value="Customer Gallery"></asp:TreeNode>
+                                   <asp:TreeNode NavigateUrl="~/ItemSearchWebForm.aspx" Text="Item Search" Value="Item Search"></asp:TreeNode>
+                               </asp:TreeNode>
+                               <asp:TreeNode Text="About" Value="About"></asp:TreeNode>
+                           </Nodes>
+                       </asp:TreeView>
+                   </div>
+                   <div class="col-md-10" id="content">
+                       <asp:ContentPlaceHolder ID="WebForms" runat="server">
+
+                       </asp:ContentPlaceHolder>
+                   </div>
+               </div>
+           <footer class="panel-footer" id="footer" align="center">
+               &copy Syed Hassaan Ahmed (2015 - ARID - 2398) .2017
+           </footer>
+        </div>
+    </form>
+</body>
+</html>
