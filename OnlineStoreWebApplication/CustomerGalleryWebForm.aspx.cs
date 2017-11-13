@@ -91,5 +91,10 @@ namespace OnlineStoreWebApplication
             }
         }
 
+        protected void UpdateTimer_Tick(object sender, EventArgs e)
+        {
+            FNLabel.Text = "timeout";
+            EmailLabel.Text = "timeout";
+        }
     }
 }

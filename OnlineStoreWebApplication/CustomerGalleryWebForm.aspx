@@ -38,6 +38,7 @@
              <asp:ScriptManager ID="ScriptManager" runat="server" />
              <asp:UpdatePanel ID="UpdatePanel" runat="server">
               <ContentTemplate>
+                  <asp:Timer runat="server" id="UpdateTimer" interval="5000" ontick="UpdateTimer_Tick" />
                 <h2 align="center">Customer Info</h2>
                 <table>
                     <tr>
