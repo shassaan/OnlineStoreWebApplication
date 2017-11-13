@@ -30,22 +30,32 @@
                     </asp:DataList>
                 </tr>
             </table>
-            <h2 align="center">Customer Info</h2>
-            <table>
-                <tr>
-                    <td><asp:Label ID="Label1" runat="server" Text="ID: "></asp:Label></td>
-                    <td><asp:Label ID="IdLabel" runat="server" Text="------"></asp:Label></td>
-                    <td><asp:Button ID="SearchButton" runat="server" Text="Search" OnClick="SearchButton_Click" CssClass="btn btn-info"/></td>
-                </tr>
-                <tr>
-                    <td><asp:Label ID="Label2" runat="server" Text="Full Name: "></asp:Label></td>
-                    <td><asp:Label ID="FNLabel" runat="server" Text="------"></asp:Label></td>
-                </tr>
-                <tr>
-                    <td><asp:Label ID="Label3" runat="server" Text="Email: "></asp:Label></td>
-                    <td><asp:Label ID="EmailLabel" runat="server" Text="------"></asp:Label></td>
-                </tr>
-            </table>
+             <asp:UpdateProgress runat="server">
+               <ProgressTemplate>
+                   <asp:Image ID="Image" runat="server" ImageUrl="~/Images/Gear.svg"/>
+               </ProgressTemplate>
+             </asp:UpdateProgress>
+             <asp:ScriptManager ID="ScriptManager" runat="server" />
+             <asp:UpdatePanel ID="UpdatePanel" runat="server">
+              <ContentTemplate>
+                <h2 align="center">Customer Info</h2>
+                <table>
+                    <tr>
+                        <td><asp:Label ID="Label1" runat="server" Text="ID: "></asp:Label></td>
+                        <td><asp:Label ID="IdLabel" runat="server" Text="------"></asp:Label></td>
+                        <td><asp:Button ID="SearchButton" runat="server" Text="Search" OnClick="SearchButton_Click" CssClass="btn btn-info"/></td>
+                    </tr>
+                    <tr>
+                        <td><asp:Label ID="Label2" runat="server" Text="Full Name: "></asp:Label></td>
+                        <td><asp:Label ID="FNLabel" runat="server" Text="------"></asp:Label></td>
+                    </tr>
+                    <tr>
+                        <td><asp:Label ID="Label3" runat="server" Text="Email: "></asp:Label></td>
+                        <td><asp:Label ID="EmailLabel" runat="server" Text="------"></asp:Label></td>
+                    </tr>
+                </table>
+              </ContentTemplate>
+           </asp:UpdatePanel>
         </div>
 
 </asp:Content>

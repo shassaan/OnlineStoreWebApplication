@@ -78,6 +78,7 @@
     <Content Include="assets\js\jquery-3.2.1.min.js" />
     <Content Include="assets\js\npm.js" />
     <Content Include="Images\4.jpg" />
+    <Content Include="Images\Gear.svg" />
     <Content Include="Images\header.jpg" />
     <Content Include="Images\lock.svg" />
     <Content Include="Images\shopping.jpg" />
