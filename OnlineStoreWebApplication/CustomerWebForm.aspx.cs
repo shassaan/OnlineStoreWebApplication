@@ -35,7 +35,7 @@ namespace OnlineStoreWebApplication
             String query = "select * from Customer where Cust_id = '"+UserIdTextBox.Text+"' AND Pasword = '"+PasswordLoginTextBox.Text+"'";
             if(cc.Verify(query))
             {
-                Response.Redirect("OrderWebform.aspx");
+                Response.Redirect("OrderWebform.aspx?c_id="+UserIdTextBox.Text+"");
             }
             else
             {
