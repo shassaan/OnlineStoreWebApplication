@@ -21,7 +21,7 @@ namespace OnlineStoreWebApplication
             if(!IsPostBack)
             {
                 String Query = "select distinct Gender from Customer";
-                sdr = cc.DisplayInfo(Query);
+                sdr = cc.GetDataSdr(Query);
                 while (sdr.Read())
                 {
                     GenderDropDownList.Items.Add(sdr["Gender"].ToString());
@@ -83,7 +83,7 @@ namespace OnlineStoreWebApplication
         protected void SearchButton_Click(object sender, EventArgs e)
         {
             Query = "select F_name+' '+L_name as FullName , Email from Customer where Cust_id='" + IdLabel.Text + "'";
-            sdr = cc.DisplayInfo(Query);
+            sdr = cc.GetDataSdr(Query);
             while(sdr.Read())
             {
                 FNLabel.Text = sdr["FullName"].ToString();

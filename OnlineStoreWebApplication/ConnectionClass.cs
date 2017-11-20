@@ -55,7 +55,7 @@ namespace OnlineStoreWebApplication
             }
         }
 
-        public SqlDataReader DisplayInfo(String Query)
+        public SqlDataReader GetDataSdr(String Query)
         {
             Cmd = new SqlCommand(Query, ConObj);
             sdr = Cmd.ExecuteReader();
