@@ -109,6 +109,7 @@
     <Content Include="ItemSearchWebForm.aspx" />
     <Content Include="ItemTypeWebForm.aspx" />
     <Content Include="ItemWebForm.aspx" />
+    <Content Include="OrderWebForm.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +155,13 @@
     </Compile>
     <Compile Include="MySite.Master.designer.cs">
       <DependentUpon>MySite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OrderWebForm.aspx.cs">
+      <DependentUpon>OrderWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderWebForm.aspx.designer.cs">
+      <DependentUpon>OrderWebForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
