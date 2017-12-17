@@ -88,7 +88,7 @@ namespace OnlineStoreWebApplication
             try
             {
                 TotalPriceLabel.Text = float.Parse(PriceLabel.Text) * int.Parse(QuantitiTextBox.Text) + "";
-                Query = "insert into CustomerOrder(Cust_id , Type_id,Item_id,Quantity,OrderDate,Bill,status) values('"+UseridLabel.Text.Split(' ')[1]+"' , '" + TypeDropDownList.SelectedItem.Value + "' , '" + ItemIdLabel.Text + "' , '" + QuantitiTextBox.Text + "' , '" + DateTime.Now.ToString() + "' , '" + TotalPriceLabel.Text + "' , '0')";
+                Query = "insert into CustomerOrder(Cust_id , Type_id,Item_id,Quantity,OrderDate,Bill,status) values('"+UseridLabel.Text.Split(' ')[1]+"' , '" + TypeDropDownList.SelectedItem.Value + "' , '" + ItemIdLabel.Text + "' , '" + QuantitiTextBox.Text + "' , '" + DateTime.Now.ToString().Split(' ')[0] + "' , '" + TotalPriceLabel.Text + "' , '0')";
                 cc.InsertUpdateDelete(Query);
                 Response.Write("<script>alert('Your Order Is Recived And Waiting To Be Shipped')</script>");
             }
